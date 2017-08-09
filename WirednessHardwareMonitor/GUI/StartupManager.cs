@@ -25,8 +25,7 @@ namespace WirednessHardwareMonitor.GUI {
     private bool startup;
     private bool isAvailable;
 
-    private const string REGISTRY_RUN =
-      @"Software\Microsoft\Windows\CurrentVersion\Run";
+    private const string REGISTRY_RUN = @"Software\Microsoft\Windows\CurrentVersion\Run";
 
     private bool IsAdministrator() {
       try {

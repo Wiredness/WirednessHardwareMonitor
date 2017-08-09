@@ -79,7 +79,7 @@ namespace WirednessHardwareMonitor.Hardware {
     }
 
     private static bool ExtractDriver(string fileName) {
-      string resourceName = "WirednessHardwareMonitor.Hardware." +
+      string resourceName = "WirednessHardwareMonitorLib.Hardware." +
         (OperatingSystem.Is64BitOperatingSystem() ? "WinRing0x64.sys" : 
         "WinRing0.sys");
 
