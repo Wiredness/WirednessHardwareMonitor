@@ -53,7 +53,7 @@ namespace WirednessHardwareMonitor.GUI {
         SendHideShowCommand();
       };
       this.mainIcon.Icon = EmbeddedResources.GetIcon("smallicon.ico");
-      this.mainIcon.Text = "Open Hardware Monitor";
+      this.mainIcon.Text = "Wiredness Hardware Monitor";
     }
 
     private void HardwareRemoved(IHardware hardware) {

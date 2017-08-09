@@ -673,7 +673,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.Menu = this.mainMenu;
       this.Name = "MainForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-      this.Text = "Open Hardware Monitor";
+      this.Text = "Wiredness Hardware Monitor";
       this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
       this.Load += new System.EventHandler(this.MainForm_Load);
       this.ResizeEnd += new System.EventHandler(this.MainForm_MoveOrResize);

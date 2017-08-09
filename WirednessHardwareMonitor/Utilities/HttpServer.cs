@@ -66,7 +66,7 @@ namespace WirednessHardwareMonitor.Utilities {
           listenerThread = new Thread(HandleRequests);
           listenerThread.Start();
         }
-      } catch (Exception) {
+      } catch (Exception ex) {
         return false;
       }
 

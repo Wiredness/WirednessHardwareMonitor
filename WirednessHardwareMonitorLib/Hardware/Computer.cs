@@ -288,7 +288,7 @@ namespace WirednessHardwareMonitor.Hardware {
       using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture)) {
 
         w.WriteLine();
-        w.WriteLine("Open Hardware Monitor Report");
+        w.WriteLine("Wiredness Hardware Monitor Report");
         w.WriteLine();
 
         Version version = typeof(Computer).Assembly.GetName().Version;

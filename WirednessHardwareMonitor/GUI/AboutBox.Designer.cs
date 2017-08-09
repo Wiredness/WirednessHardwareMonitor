@@ -74,7 +74,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.label1.Name = "label1";
       this.label1.Size = new System.Drawing.Size(120, 13);
       this.label1.TabIndex = 2;
-      this.label1.Text = "Open Hardware Monitor";
+      this.label1.Text = "Wiredness Hardware Monitor";
       // 
       // label2
       // 

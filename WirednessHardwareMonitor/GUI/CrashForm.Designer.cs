@@ -96,7 +96,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.titleLabel.Padding = new System.Windows.Forms.Padding(10);
       this.titleLabel.Size = new System.Drawing.Size(619, 52);
       this.titleLabel.TabIndex = 4;
-      this.titleLabel.Text = "Open Hardware Monitor has encountered a problem and needs to close. We are sorry " +
+      this.titleLabel.Text = "Wiredness Hardware Monitor has encountered a problem and needs to close. We are sorry " +
           "for the inconvenience.";
       // 
       // label3
@@ -225,7 +225,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.Name = "CrashReportForm";
       this.ShowIcon = false;
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Open Hardware Monitor";
+      this.Text = "Wiredness Hardware Monitor";
       this.commentPanel.ResumeLayout(false);
       this.commentPanel.PerformLayout();
       this.reportPanel.ResumeLayout(false);

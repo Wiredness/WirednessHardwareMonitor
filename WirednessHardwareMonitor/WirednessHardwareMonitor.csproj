@@ -33,6 +33,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WirednessHardwareMonitor.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Resources\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aga.Controls">
       <HintPath>..\External\Aga.Controls.dll</HintPath>
@@ -147,8 +156,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\app.manifest" />
-    <None Include="Resources\gadget.xcf" />
-    <None Include="Resources\icon.xcf" />
+    <EmbeddedResource Include="Resources\gadget.xcf" />
+    <EmbeddedResource Include="Resources\icon.xcf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -160,64 +169,67 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\ati.png" />
-    <Content Include="Resources\barback.png" />
-    <Content Include="Resources\barblue.png" />
-    <Content Include="Resources\bigng.png" />
-    <Content Include="Resources\chip.png" />
-    <Content Include="Resources\clock.png" />
-    <Content Include="Resources\computer.png" />
-    <Content Include="Resources\control.png" />
-    <Content Include="Resources\cpu.png" />
-    <Content Include="Resources\data.png" />
-    <Content Include="Resources\factor.png" />
-    <Content Include="Resources\fan.png" />
-    <Content Include="Resources\flow.png" />
-    <Content Include="Resources\gadget.png" />
-    <Content Include="Resources\hdd.png" />
-    <Content Include="Resources\icon.ico" />
-    <Content Include="Resources\level.png" />
-    <Content Include="Resources\load.png" />
-    <Content Include="Resources\mainboard.png" />
-    <Content Include="Resources\nvidia.png" />
-    <Content Include="Resources\power.png" />
-    <Content Include="Resources\ram.png" />
-    <Content Include="Resources\smallicon.ico" />
-    <Content Include="Resources\temperature.png" />
-    <Content Include="Resources\voltage.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-icons_222222_256x240.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-icons_454545_256x240.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-icons_888888_256x240.png" />
-    <Content Include="Resources\Web\css\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Resources\Web\css\custom-theme\jquery-ui-1.8.16.custom.css" />
-    <Content Include="Resources\Web\css\jquery.treeTable.css" />
-    <Content Include="Resources\Web\css\ohm_web.css" />
-    <Content Include="Resources\Web\images\toggle-collapse-dark.png" />
-    <Content Include="Resources\Web\images\toggle-collapse-light.png" />
-    <Content Include="Resources\Web\images\toggle-expand-dark.png" />
-    <Content Include="Resources\Web\images\toggle-expand-light.png" />
-    <Content Include="Resources\Web\images\transparent.png" />
-    <Content Include="Resources\Web\index.html" />
-    <Content Include="Resources\Web\js\jquery-1.7.2.js" />
-    <Content Include="Resources\Web\js\jquery-1.7.2.min.js" />
-    <Content Include="Resources\Web\js\jquery-ui-1.8.16.custom.min.js" />
-    <Content Include="Resources\Web\js\jquery.tmpl.js" />
-    <Content Include="Resources\Web\js\jquery.tmpl.min.js" />
-    <Content Include="Resources\Web\js\jquery.treeTable.min.js" />
-    <Content Include="Resources\Web\js\knockout-2.1.0.js" />
-    <Content Include="Resources\Web\js\knockout-2.1.0.min.js" />
-    <Content Include="Resources\Web\js\knockout.mapping-latest.js" />
-    <Content Include="Resources\Web\js\knockout.mapping-latest.min.js" />
-    <Content Include="Resources\Web\js\ohm_web.js" />
+    <EmbeddedResource Include="Resources\ati.png" />
+    <EmbeddedResource Include="Resources\barback.png" />
+    <EmbeddedResource Include="Resources\barblue.png" />
+    <EmbeddedResource Include="Resources\bigng.png" />
+    <EmbeddedResource Include="Resources\chip.png" />
+    <EmbeddedResource Include="Resources\clock.png" />
+    <EmbeddedResource Include="Resources\computer.png" />
+    <EmbeddedResource Include="Resources\control.png" />
+    <EmbeddedResource Include="Resources\cpu.png" />
+    <EmbeddedResource Include="Resources\data.png" />
+    <EmbeddedResource Include="Resources\factor.png" />
+    <EmbeddedResource Include="Resources\fan.png" />
+    <EmbeddedResource Include="Resources\flow.png" />
+    <EmbeddedResource Include="Resources\gadget.png" />
+    <EmbeddedResource Include="Resources\hdd.png" />
+    <EmbeddedResource Include="Resources\icon.ico" />
+    <EmbeddedResource Include="Resources\level.png" />
+    <EmbeddedResource Include="Resources\load.png" />
+    <EmbeddedResource Include="Resources\mainboard.png" />
+    <EmbeddedResource Include="Resources\nvidia.png" />
+    <EmbeddedResource Include="Resources\power.png" />
+    <EmbeddedResource Include="Resources\ram.png" />
+    <EmbeddedResource Include="Resources\smallicon.ico" />
+    <EmbeddedResource Include="Resources\temperature.png" />
+    <EmbeddedResource Include="Resources\voltage.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-icons_222222_256x240.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-icons_2e83ff_256x240.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-icons_454545_256x240.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-icons_888888_256x240.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <EmbeddedResource Include="Resources\Web\css\custom-theme\jquery-ui-1.8.16.custom.css" />
+    <EmbeddedResource Include="Resources\Web\css\jquery.treeTable.css" />
+    <EmbeddedResource Include="Resources\Web\css\ohm_web.css" />
+    <EmbeddedResource Include="Resources\Web\images\toggle-collapse-dark.png" />
+    <EmbeddedResource Include="Resources\Web\images\toggle-collapse-light.png" />
+    <EmbeddedResource Include="Resources\Web\images\toggle-expand-dark.png" />
+    <EmbeddedResource Include="Resources\Web\images\toggle-expand-light.png" />
+    <EmbeddedResource Include="Resources\Web\images\transparent.png" />
+    <EmbeddedResource Include="Resources\Web\index.html" />
+    <EmbeddedResource Include="Resources\Web\js\jquery-1.7.2.js" />
+    <EmbeddedResource Include="Resources\Web\js\jquery-1.7.2.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\jquery-ui-1.8.16.custom.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\jquery.tmpl.js" />
+    <EmbeddedResource Include="Resources\Web\js\jquery.tmpl.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\jquery.treeTable.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\knockout-2.1.0.js" />
+    <EmbeddedResource Include="Resources\Web\js\knockout-2.1.0.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\knockout.mapping-latest.js" />
+    <EmbeddedResource Include="Resources\Web\js\knockout.mapping-latest.min.js" />
+    <EmbeddedResource Include="Resources\Web\js\ohm_web.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

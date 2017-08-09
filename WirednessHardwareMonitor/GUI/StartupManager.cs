@@ -59,7 +59,7 @@ namespace WirednessHardwareMonitor.GUI {
             // check if the taskscheduler is running
             IRunningTaskCollection collection = scheduler.GetRunningTasks(0);            
 
-            ITaskFolder folder = scheduler.GetFolder("\\Open Hardware Monitor");
+            ITaskFolder folder = scheduler.GetFolder("\\Wiredness Hardware Monitor");
             IRegisteredTask task = folder.GetTask("Startup");
             startup = (task != null) && 
               (task.Definition.Triggers.Count > 0) &&
@@ -107,7 +107,7 @@ namespace WirednessHardwareMonitor.GUI {
     private void CreateSchedulerTask() {
       ITaskDefinition definition = scheduler.NewTask(0);
       definition.RegistrationInfo.Description =
-        "This task starts the Open Hardware Monitor on Windows startup.";
+        "This task starts the Wiredness Hardware Monitor on Windows startup.";
       definition.Principal.RunLevel =
         TASK_RUNLEVEL.TASK_RUNLEVEL_HIGHEST;
       definition.Settings.DisallowStartIfOnBatteries = false;
@@ -126,9 +126,9 @@ namespace WirednessHardwareMonitor.GUI {
       ITaskFolder root = scheduler.GetFolder("\\");
       ITaskFolder folder;
       try {
-        folder = root.GetFolder("Open Hardware Monitor");
+        folder = root.GetFolder("Wiredness Hardware Monitor");
       } catch (IOException) {
-        folder = root.CreateFolder("Open Hardware Monitor", "");
+        folder = root.CreateFolder("Wiredness Hardware Monitor", "");
       }
       folder.RegisterTaskDefinition("Startup", definition,
         (int)TASK_CREATION.TASK_CREATE_OR_UPDATE, null, null,
@@ -138,11 +138,11 @@ namespace WirednessHardwareMonitor.GUI {
     private void DeleteSchedulerTask() {
       ITaskFolder root = scheduler.GetFolder("\\");
       try {
-        ITaskFolder folder = root.GetFolder("Open Hardware Monitor");
+        ITaskFolder folder = root.GetFolder("Wiredness Hardware Monitor");
         folder.DeleteTask("Startup", 0);
       } catch (IOException) { }
       try {
-        root.DeleteFolder("Open Hardware Monitor", 0);
+        root.DeleteFolder("Wiredness Hardware Monitor", 0);
       } catch (IOException) { }
     }
 

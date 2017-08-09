@@ -193,7 +193,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.titleLabel.Name = "titleLabel";
       this.titleLabel.Size = new System.Drawing.Size(409, 13);
       this.titleLabel.TabIndex = 10;
-      this.titleLabel.Text = "Help improve the Open Hardware Monitor by submitting a report about your hardware" +
+      this.titleLabel.Text = "Help improve the Wiredness Hardware Monitor by submitting a report about your hardware" +
           ".";
       // 
       // ReportForm
@@ -218,7 +218,7 @@ namespace WirednessHardwareMonitor.GUI {
       this.Name = "ReportForm";
       this.ShowIcon = false;
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Open Hardware Monitor";
+      this.Text = "Wiredness Hardware Monitor";
       this.commentPanel.ResumeLayout(false);
       this.commentPanel.PerformLayout();
       this.reportPanel.ResumeLayout(false);
